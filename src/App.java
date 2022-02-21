@@ -1,9 +1,10 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-        Conta cc = new ContaCorrente();
-        Conta poupanca = new ContaPoupanca();
-
+        Cliente raphael = new Cliente();
+        raphael.setNome("Raphel Cunha");
+        Conta cc = new ContaCorrente(raphael);
+        Conta poupanca = new ContaPoupanca(raphael);
+        
         //cc.depositar(100);
         cc.transferir(100, poupanca);
 
